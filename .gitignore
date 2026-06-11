@@ -1,0 +1,11 @@
+node_modules/
+dist/
+target/
+WoxCodeData/
+*.log
+.DS_Store
+.hermes/
+.vscode/
+public/tauri.svg
+public/vite.svg
+src/assets/
