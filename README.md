@@ -50,23 +50,11 @@
 
 ## 构建
 
-需要在 **x64 Native Tools Command Prompt for VS 2022** 中运行：
-
 ```bash
 cd D:\Works\MyProject\WoxCode
 npm install
 npm run tauri dev
 ```
 
-## 发布
-
-打 tag 后 GitHub Actions 自动构建 Windows 安装包：
-
-```bash
-git tag v0.1.1
-git push origin v0.1.1
-```
-
 ## 许可证
-
 MIT
