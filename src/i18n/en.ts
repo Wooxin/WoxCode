@@ -1,0 +1,108 @@
+import type { Translations } from "./zh";
+
+const en: Translations = {
+  appName: "WoxCode",
+  appSubtitle: "High-Performance Code Editor",
+  loading: "Loading...",
+
+  openFolder: "Open Folder",
+  openFile: "Open File",
+  dragHint: "Drop files or folders here",
+  shortcutOpenFolder: "Ctrl+O to open folder",
+
+  explorer: "Explorer",
+  search: "Search",
+  settings: "Settings",
+
+  workspace: "Workspace",
+  expand: "Expand",
+  collapse: "Collapse",
+
+  fileExplorer: "Explorer",
+  newFile: "New File",
+  refresh: "Refresh",
+  newFileName: "File name:",
+  emptyHint: "Open a folder to browse files",
+  searchComing: "Search (coming soon)",
+
+  openFileToEdit: "Open a file to start editing",
+  save: "Save",
+  closeTab: "Close",
+  close: "Close",
+  loadingEditor: "Loading...",
+
+  spaces: "Spaces",
+
+  commandPlaceholder: "Search files... (type > for commands)",
+  commandMode: "Type a command...",
+  noResults: "No results",
+  navigate: "↑↓ Navigate",
+  execute: "Enter Execute",
+  escClose: "Esc Close",
+  cmdMode: "> Commands",
+
+  cmdOpenFolder: "Open Folder",
+  cmdNewFile: "New File",
+  cmdSave: "Save",
+  cmdCloseTab: "Close Tab",
+  cmdUndo: "Undo",
+  cmdRedo: "Redo",
+  cmdShowExplorer: "Show Explorer",
+  cmdShowSearch: "Show Search",
+  cmdToggleSidebar: "Toggle Sidebar",
+  cmdToggleTerminal: "Toggle Terminal",
+  cmdAbout: "About WoxCode",
+  catFile: "File",
+  catEdit: "Edit",
+  catView: "View",
+  catHelp: "Help",
+
+  terminal: "Terminal",
+  maximize: "Maximize",
+
+  settingsTitle: "Settings",
+  appearance: "Appearance",
+  editor: "Editor",
+  keyboard: "Keyboard",
+  about: "About",
+
+  colorTheme: "Color Theme",
+  dark: "Dark",
+  light: "Light",
+  fonts: "Fonts",
+  uiFont: "UI Font",
+  editorFont: "Editor Font",
+  fontSize: "Font Size",
+  scanFonts: "Scanning fonts...",
+  manualFont: "Or type font name...",
+  defaultFont: "Default",
+
+  editorBehavior: "Editor Behavior",
+  tabSize: "Tab Size",
+  spaces2: "2 Spaces",
+  spaces4: "4 Spaces",
+  spaces8: "8 Spaces",
+  language: "Language",
+
+  shortcutList: "Keyboard Shortcuts",
+  shortcutOpenFolderDesc: "Open Folder",
+  shortcutNewFileDesc: "New File",
+  shortcutSaveDesc: "Save",
+  shortcutCloseTabDesc: "Close Tab",
+  shortcutToggleSidebarDesc: "Toggle Sidebar",
+  shortcutQuickOpenDesc: "Quick Open",
+  shortcutCommandPaletteDesc: "Command Palette",
+  shortcutNextTabDesc: "Next Tab",
+  shortcutPrevTabDesc: "Previous Tab",
+  shortcutToggleTerminalDesc: "Toggle Terminal",
+  shortcutToggleTerminalAltDesc: "Toggle Terminal (alt)",
+  shortcutSettingsDesc: "Open Settings",
+
+  aboutTitle: "WoxCode",
+  aboutDesc1: "High-Performance Code Editor",
+  aboutDesc2: "Rust First · TypeScript Assisted",
+  aboutDesc3: "Tauri 2 + React 19 + CodeMirror 6",
+  saveSettings: "Save Settings",
+};
+
+export default en;

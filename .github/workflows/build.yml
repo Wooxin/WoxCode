@@ -1,0 +1,61 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - platform: windows-latest
+            target: x86_64-pc-windows-msvc
+            ext: .exe
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tauri
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: "WoxCode v__VERSION__"
+          releaseBody: |
+            ## WoxCode v__VERSION__
+            高性能代码编辑器 — 基于 Tauri 2 + Rust + React 19
+
+            ### 功能
+            - CodeMirror 6 多语言编辑器（深色/浅色主题）
+            - 命令面板 (Ctrl+Shift+P)
+            - 全局搜索 + 正则表达式
+            - LSP 客户端（13 种语言）
+            - tree-sitter 语法解析
+            - 终端面板 (PTY + xterm.js)
+            - Markdown 预览（分屏）
+            - 可自定义字体
+            - 单实例锁 + 系统托盘
+            - 便携数据目录
+
+            ### 安装
+            下载 `.msi` 或 `.exe` 安装即可。
+
+          releaseDraft: false
+          prerelease: false
